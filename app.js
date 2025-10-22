@@ -14,6 +14,8 @@ let localProducts = JSON.parse(localStorage.getItem("products"));
 
 let container = document.getElementById("product-list");
 
+let carouselInner=document.getElementById("carousel-indicators");
+
 localProducts.forEach(p => {
   // Dış kolon div
   let col = document.createElement("div");
@@ -41,14 +43,28 @@ localProducts.forEach(p => {
   price.className = "card-text text-danger fw-bold";
   price.textContent = `${p.price.toFixed(2)} TL`;
 
+  let addButton=document.createElement("button");
+  addButton.className="btn btn-success mt-2";
+  addButton.innerText="Sepete Ekle";
+
+  addButton.addEventListener("click", () => {
+    alert(`${p.name} Bu ürün sepetinize eklendi`);
+  });
+
   // Birleştirme
   body.appendChild(title);
   body.appendChild(price);
+  body.appendChild(addButton);
   card.appendChild(img);
   card.appendChild(body);
   col.appendChild(card);
   container.appendChild(col);
-});
+  carouselInner.appendChild(item);
+
+}
+
+
+);
 
 
 const button = document.createElement("a");
@@ -60,54 +76,13 @@ button.target = "_blank";
 const divSec = document.getElementById("ButtonDiv");
 divSec.appendChild(button);
 
-document.getElementById(
-  "ButtonDiv2"
-).innerHTML = `<a id="denemeButton2" class="btn btn-danger" href="https://www.google.com.tr" target="_blank">Bana da Tıkla</a>`;
-
-// console.log(value);
+// document.getElementById(
+//   "ButtonDiv2"
+// ).innerHTML = `<a id="denemeButton2" class="btn btn-danger" href="https://www.google.com.tr" target="_blank">Bana da Tıkla</a>`;
 
 
-
-
-
-
-
-
-
-
-// // ---- Ekrana basma ----
-// function renderProducts() {
-//   const listEl = document.getElementById("productList");
-//   const data = loadProducts() || [];
-
-//   // Temizle
-//   listEl.innerHTML = "";
-
-//   data.forEach((p) => {
-//     const col = document.createElement("div");
-//     col.className = "col-12 col-sm-6 col-lg-3";
-
-//     col.innerHTML = `
-//       <div class="card h-100 shadow-sm">
-//         <img src="${p.image}" class="card-img-top" alt="${p.name}" style="object-fit:cover;height:180px;">
-//         <div class="card-body d-flex flex-column">
-//           <h5 class="card-title mb-1">${p.name}</h5>
-//           <p class="card-text text-muted mb-3">${p.price.toLocaleString("tr-TR", { style:"currency", currency:"TRY" })}</p>
-//           <div class="mt-auto d-grid">
-//             <button class="btn btn-primary btn-sm">Sepete Ekle</button>
-//           </div>
-//         </div>
-//       </div>
-//     `;
-//     listEl.appendChild(col);
-//   });
-// }
-
-// // ---- Reset butonu (test kolaylığı için) ----
-// document.getElementById("resetBtn").addEventListener("click", () => {
-//   localStorage.removeItem(LS_KEY);
-//   location.reload();
-// });
-
-// // ---- Başlat ----
-// renderProducts();
+let total=0;
+localProducts.forEach(p =>{
+     total +=p.price;
+});
+document.getElementById("totalPrice").innerText = total.toFixed(2) + "TL";
