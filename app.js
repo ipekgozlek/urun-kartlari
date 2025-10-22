@@ -1,8 +1,11 @@
 
   let products = [
-      { id: 1, name: "Lacivert Gömlek", price: 1999.9, image: "https://cdn2.jimmykey.com/jimmykey/ContentImages/Product/2025kis/5WW035633/bluz_5ww035633_lacivert-494-lacivert_1_614x805.webp" },
-      { id: 2, name: "Kırmızı Kısa Kollu Gömlek",  price: 1499.9,  image: "https://cdn2.jimmykey.com/jimmykey/ContentImages/Product/2025kis/5WW035264/bluz_5ww035264_kirmizi-600-kirmizi_1_614x805.webp" },
-      { id: 3, name: "Leopar Desenli Gömlek",   price: 2999.9,  image: "https://cdn2.jimmykey.com/jimmykey/ContentImages/Product/2025kis/5WW085612/gomlek_5ww085612_aci-kahve-803-kahverengi_1_614x805.webp" },
+      { id: 1, name: "Lacivert Gömlek", price: 1999.9, 
+        image: "https://cdn2.jimmykey.com/jimmykey/ContentImages/Product/2025kis/5WW035633/bluz_5ww035633_lacivert-494-lacivert_1_614x805.webp" },
+      { id: 2, name: "Kırmızı Kısa Kollu Gömlek",  price: 1499.9, 
+         image: "https://cdn2.jimmykey.com/jimmykey/ContentImages/Product/2025kis/5WW035264/bluz_5ww035264_kirmizi-600-kirmizi_1_614x805.webp" },
+      { id: 3, name: "Leopar Desenli Gömlek",   price: 2999.9, 
+         image: "https://cdn2.jimmykey.com/jimmykey/ContentImages/Product/2025kis/5WW085612/gomlek_5ww085612_aci-kahve-803-kahverengi_1_614x805.webp" },
       
     ];
 
@@ -48,6 +51,20 @@ localProducts.forEach(p => {
 });
 
 
+const button = document.createElement("a");
+button.id = "Button";
+button.className = "btn btn-primary";
+button.innerText = "Tıkla Beni";
+button.href = "https://www.google.com.tr";
+button.target = "_blank";
+const divSec = document.getElementById("ButtonDiv");
+divSec.appendChild(button);
+
+document.getElementById(
+  "ButtonDiv2"
+).innerHTML = `<a id="denemeButton2" class="btn btn-danger" href="https://www.google.com.tr" target="_blank">Bana da Tıkla</a>`;
+
+// console.log(value);
 
 
 
