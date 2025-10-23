@@ -76,6 +76,8 @@ button.target = "_blank";
 const divSec = document.getElementById("ButtonDiv");
 divSec.appendChild(button);
 
+
+
 // document.getElementById(
 //   "ButtonDiv2"
 // ).innerHTML = `<a id="denemeButton2" class="btn btn-danger" href="https://www.google.com.tr" target="_blank">Bana da Tıkla</a>`;
