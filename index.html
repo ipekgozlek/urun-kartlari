@@ -74,6 +74,8 @@
    <div class="row">
      <!-- 1. Carousel -->
    <div class="col-12 col-lg-6 mb-4">
+      <div class="p-3 border rounded shadow-sm bg-white">
+      <h4 class="text-center mb-3 text-primary">Yeni Sezon Ürünleri</h4>
     <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner" id="carousel1-inner">
           <!-- ürün kartları -->
@@ -82,13 +84,17 @@
         <span class="carousel-control-prev-icon"></span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
       </button>
-
+</div>
     </div>
    </div>
+    
     <!-- 2. Carousel -->
 
-    <div class="col-12 col-lg-6 mb-4">
+   <div class="col-12 col-lg-6 mb-4">
+      <div class="p-3 border rounded shadow-sm bg-white">
+        <h4 class="text-center mb-3 text-success">Fırsat Ürünleri</h4>
       <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" id="carousel2-inner">
             <!-- ürün kartları -->
@@ -99,9 +105,11 @@
         <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
           <span class="carousel-control-next-icon"></span>
         </button>
+
       </div>
     </div>
    </div>
+ </div>
 </div>
 
 
@@ -139,16 +147,45 @@
   </button>
 </div> -->
 
+<style>
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: nowrap;
+  overflow: hidden; /* Taşmaları gizler */
+}
 
+.card {
+  flex: 0 0 auto;
+  width: 14rem;
+}
 
+/* Görsel oranlarını sabitle */
+.card img {
+  height: 150px;
+  object-fit: cover;
+  width: 100%;
+}
 
-
+/* Mobil görünüm */
 @media (max-width: 768px) {
   .carousel-item {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
 }
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+</style>
+
+
 
 
     <script
