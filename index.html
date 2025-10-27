@@ -70,13 +70,43 @@
 
    <h3>Kampanyalar</h3>
     
+<div class="container my-5">
+   <div class="row">
+     <!-- 1. Carousel -->
+   <div class="col-12 col-lg-6 mb-4">
+    <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="carousel1-inner">
+          <!-- ürün kartları -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+      </button>
 
-<div id="carouselDark" class="carousel carousel-dark slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+    </div>
+   </div>
+    <!-- 2. Carousel -->
+
+    <div class="col-12 col-lg-6 mb-4">
+      <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="carousel2-inner">
+            <!-- ürün kartları -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon"> </span>     
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+   </div>
+</div>
+
+
+  
+  <!-- </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="100">
       <div class="d-flex justify-content-center gap-3">
@@ -107,7 +137,18 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div> -->
+
+
+
+
+
+@media (max-width: 768px) {
+  .carousel-item {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
     <script
